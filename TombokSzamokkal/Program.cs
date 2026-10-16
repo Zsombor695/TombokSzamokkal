@@ -38,11 +38,29 @@
             }
             Console.WriteLine($"Negatív számok: {db}");
         }
+        static void eldontes()
+        {
+            int i = 0;
+            while (i < tomb.Length && tomb[i] != 0)
+            {
+                i++;
+            }
+            if (i < tomb.Length)
+            {
+                Console.WriteLine("Van 0 a tömbben.");
+            }
+            else
+            {
+                Console.WriteLine("Nincs 0 a tömbben.");
+            }
+
+        }
         static void Main(string[] args)
         {
             Feltolt();
             Osszegzes();
             Megszamolas();
+            eldontes();
         }
     }
 }
