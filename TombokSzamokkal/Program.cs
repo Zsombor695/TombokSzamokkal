@@ -53,7 +53,33 @@
             {
                 Console.WriteLine("Nincs 0 a tömbben.");
             }
-
+        }
+        static void kereses()
+            {
+            int keresett = 0;
+            int i = 0;
+            while (i < tomb.Length && tomb[i] != keresett)
+            {
+                i++;
+            }
+            if (i < tomb.Length)
+            {
+                Console.WriteLine($"A keresett szám az {i}. indexen található.");
+            }
+            else
+            {
+                Console.WriteLine("A keresett szám nincs a tömbben.");
+            }
+        }
+        static void kivalasztas()
+        {
+            tomb[8] = 10;
+            int i = 0;
+            while (tomb[i] != 10)
+            {
+                i++;
+            }
+            Console.WriteLine($"A keresett szám az {i + 1}. helyen található");
         }
         static void Main(string[] args)
         {
@@ -61,6 +87,8 @@
             Osszegzes();
             Megszamolas();
             eldontes();
+            kereses();
+            kivalasztas();
         }
     }
 }
