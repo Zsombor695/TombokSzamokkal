@@ -16,10 +16,33 @@
                 Console.WriteLine(item + " ");
             }
             Console.WriteLine();
-        }   
+        }
+        static void Osszegzes()
+        {
+            int osszeg = 0;
+            foreach (int item in tomb)
+            {
+                osszeg += item;
+            }
+            Console.WriteLine($"A tömb elemeinek összege: {osszeg}");
+        }
+        static void Megszamolas()
+        {
+            int db = 0;
+            foreach (int item in tomb)
+            {
+                if (item < 0)
+                {
+                    db++;
+                }
+            }
+            Console.WriteLine($"Negatív számok: {db}");
+        }
         static void Main(string[] args)
         {
             Feltolt();
+            Osszegzes();
+            Megszamolas();
         }
     }
 }
